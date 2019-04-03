@@ -3,15 +3,15 @@
 
     <item
         android:id="@+id/a"
-        android:title="A" />
+        android:title="News" />
     <item
         android:id="@+id/b"
-        android:title="B" />
+        android:title="Entertainment" />
     <item
         android:id="@+id/c"
-        android:title="C" />
+        android:title="Talent" />
     <item
         android:id="@+id/d"
-        android:title="D" />
+        android:title="Others" />
 
 </menu>

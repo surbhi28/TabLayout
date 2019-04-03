@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
-    api-level="23"
-    build-mode="COLD"
+    abi="x86"
+    api-level="28"
+    build-mode="FULL"
     density="xxhdpi"
     format="10"
     plugin-version="3.2.1"
-    timestamp="1554186444048"
+    timestamp="1554284294694"
     token="6083899418041153181"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
@@ -18,19 +18,58 @@
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="15631" />
     <task
         name="verifier"
         duration="0" />
 
+    <artifact
+        location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        type="SPLIT" />
     <artifact
         location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1554183938741"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="1554284294694"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+            type="SPLIT" />
         <artifact
             location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
@@ -38,16 +77,22 @@
             location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
+            location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
             location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
@@ -56,31 +101,8 @@
             location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
             location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
-        <artifact
-            location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="FIELD_ADDED"
-        timestamp="1554185991228"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1554186444048"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />

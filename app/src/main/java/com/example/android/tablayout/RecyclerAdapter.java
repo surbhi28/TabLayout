@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -23,7 +24,7 @@ import java.util.List;
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.VideoInfoHolder> {
 
     //these ids are the unique id for each video
-    private List<String> list = new ArrayList<>();
+    private List<Details> list = new ArrayList<>();
     Context ctx;
 
     public RecyclerAdapter(Context context) {
@@ -52,6 +53,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.VideoI
             public void onThumbnailLoaded(YouTubeThumbnailView youTubeThumbnailView, String s) {
                 youTubeThumbnailView.setVisibility(View.VISIBLE);
                 holder.relativeLayoutOverYouTubeThumbnailView.setVisibility(View.VISIBLE);
+                holder.titleView.setText(list.get(position).getVideoTitle());
                 Log.i("onThumbnailLoaded1", "onThumbnailLoaded1");
             }
         };
@@ -60,8 +62,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.VideoI
             @Override
             public void onInitializationSuccess(YouTubeThumbnailView youTubeThumbnailView, YouTubeThumbnailLoader youTubeThumbnailLoader) {
 
-                youTubeThumbnailLoader.setVideo(list.get(position));
+                youTubeThumbnailLoader.setVideo(list.get(position).getVideoId());
                 youTubeThumbnailLoader.setOnThumbnailLoadedListener(onThumbnailLoadedListener);
+
                 Log.i("success1", "success1");
             }
 
@@ -71,6 +74,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.VideoI
             }
 
         });
+
     }
 
     @Override
@@ -83,11 +87,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.VideoI
         protected RelativeLayout relativeLayoutOverYouTubeThumbnailView;
         YouTubeThumbnailView youTubeThumbnailView;
         protected ImageView playButton;
+        protected TextView titleView;
 
         public VideoInfoHolder(View itemView) {
             super(itemView);
             Log.i("VideoInfoHolder", "VideoInfoHolder");
             playButton = (ImageView) itemView.findViewById(R.id.btnYoutube_player);
+            titleView = (TextView)itemView.findViewById(R.id.title_view);
             playButton.setOnClickListener(this);
             relativeLayoutOverYouTubeThumbnailView = (RelativeLayout) itemView.findViewById(R.id.relativeLayout_over_youtube_thumbnail);
             youTubeThumbnailView = (YouTubeThumbnailView) itemView.findViewById(R.id.youtube_thumbnail);
@@ -97,7 +103,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.VideoI
         public void onClick(View v) {
             Log.i("onClick", "onClick");
             try {
-                Intent intent = YouTubeStandalonePlayer.createVideoIntent((Activity) ctx, Config.YOUTUBE_API_KEY, list.get(getLayoutPosition()), 0, true, true);
+                Intent intent = YouTubeStandalonePlayer.createVideoIntent((Activity) ctx, Config.YOUTUBE_API_KEY, list.get(getLayoutPosition()).getVideoId(), 0, true, true);
                 ctx.startActivity(intent);
             } catch (Exception e) {
                 Toast.makeText(ctx, e.toString(), Toast.LENGTH_SHORT).show();
@@ -105,7 +111,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.VideoI
         }
     }
 
-    public void setData(List<String> list) {
+    public void setData(List<Details> list) {
         this.list = list;
         notifyDataSetChanged();
     }

@@ -23,7 +23,7 @@ public class TabOne extends Fragment {
     public static final String LOG_TAG = TabOne.class.getName();
     ConnectionClass connectionClass;
 
-    List<String> list = new ArrayList<>();
+    List<Details> list;
 
     ProgressBar pbbar;
     RecyclerAdapter adapter;
@@ -52,7 +52,7 @@ public class TabOne extends Fragment {
         return rootView;
     }
 
-    public class DoLogin extends AsyncTask<String, Void, List<String>> {
+    public class DoLogin extends AsyncTask<String, Void, List<Details>> {
 
         @Override
         protected void onPreExecute() {
@@ -60,7 +60,7 @@ public class TabOne extends Fragment {
         }
 
         @Override
-        protected List<String> doInBackground(String... params) {
+        protected List<Details> doInBackground(String... params) {
             try {
                 Connection con = connectionClass.CONN();
                 if (con == null) {
@@ -74,7 +74,10 @@ public class TabOne extends Fragment {
                     while (rs.next()) {
                         String str = rs.getString("descriptionshort");
                         str = str.substring(30, str.length());
-                        list.add(str);
+                        String title = rs.getString("cleantitle");
+
+                        Details details = new Details(str,title);
+                        list.add(details);
                     }
                 }
             } catch (Exception ex) {
@@ -83,9 +86,9 @@ public class TabOne extends Fragment {
             return list;
         }
         @Override
-        protected void onPostExecute(List<String> list) {
+        protected void onPostExecute(List<Details> list) {
             if (!(list.isEmpty())) {
-                Log.d(LOG_TAG,list.get(0));
+                Log.d(LOG_TAG,list.get(0).getVideoId());
                 pbbar.setVisibility(View.GONE);
                 adapter.setData(list);
             }

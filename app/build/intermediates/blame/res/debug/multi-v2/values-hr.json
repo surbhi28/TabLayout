@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\nalin\\Desktop\\TabLayout\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hr\\values-hr.xml",
+            "outputFile": "C:\\Users\\nalin\\Desktop\\Android Projects\\TabLayout\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hr\\values-hr.xml",
             "map": [
                 {
                     "source": "C:\\Users\\nalin\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\7654782d56ae2327e84fb15108d4667a\\res\\values-hr\\values-hr.xml",

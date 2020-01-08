@@ -3,25 +3,25 @@
     abi="armeabi-v7a,armeabi"
     api-level="23"
     build-mode="FULL"
-    density="xxhdpi"
+    density="xhdpi"
     format="10"
     plugin-version="3.2.1"
-    timestamp="1555317623010"
+    timestamp="1558342036057"
     token="6083899418041153181"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="5454" />
+        duration="3313" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="594" />
+        duration="312" />
     <task
         name="verifier"
-        duration="297" />
+        duration="187" />
 
     <artifact
         location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
@@ -62,7 +62,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1555317623010"
+        timestamp="1558342036057"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\nalin\Desktop\TabLayout\app\build\intermediates\split-apk\debug\slices\slice_8.apk"

@@ -693,6 +693,7 @@ color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color tooltip_background_dark
 color tooltip_background_light
+color window_background
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -994,6 +995,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable baseline_menu_white
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1052,6 +1054,7 @@ id add
 id alertTitle
 id all
 id always
+id appBar
 id async
 id auto
 id b
@@ -1071,6 +1074,7 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id collapsing_bar
 id container
 id content
 id contentPanel
@@ -1124,7 +1128,7 @@ id line3
 id list
 id listMode
 id list_item
-id main_layout
+id main_content
 id masked
 id message
 id middle
@@ -1318,6 +1322,7 @@ layout support_simple_spinner_dropdown_item
 layout tab1
 layout tab2
 layout tab3
+layout tab_layout
 menu drawer_view
 mipmap ic_launcher
 mipmap ic_launcher_round
